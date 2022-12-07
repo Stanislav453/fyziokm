@@ -1,10 +1,11 @@
 import React from 'react';
 import './App.scss';
+import myHeader from './components/myHeader/myHeader';
 
 function App() {
   return (
     <section  >
-      <h1>hellov world</h1>
+      <myHeader />
     </section>
   );
 }
