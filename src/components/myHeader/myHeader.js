@@ -1,4 +1,5 @@
 import "./myHeader.scss";
+import myMenu from "../myMenu/myMenu";
 
 const myHeader = () => {
     return (
