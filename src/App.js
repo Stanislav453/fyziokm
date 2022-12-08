@@ -1,11 +1,11 @@
 import React from 'react';
 import './App.scss';
-import myHeader from './components/myHeader/myHeader';
+import MyHeader from './components/myHeader/myHeader';
 
 function App() {
   return (
     <section  >
-      <myHeader />
+      <MyHeader />
     </section>
   );
 }

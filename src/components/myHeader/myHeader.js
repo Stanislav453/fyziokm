@@ -1,10 +1,13 @@
+import React from "react";
 import "./myHeader.scss";
-import myMenu from "../myMenu/myMenu";
+import MyMenu from "../myMenu/MyMenu";
 
-const myHeader = () => {
+const MyHeader = () =>  {
     return (
-        <h2>MyHeader</h2>
-    );
-};
+        <div className="my-header">
 
-export default myHeader
+        </div>
+    )
+}
+
+export default MyHeader;
