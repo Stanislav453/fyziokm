@@ -1,1 +1,67 @@
 @import "../../SCSS/variables";
+
+.navigation {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #2f4858;
+
+    .icons {
+        display: flex;
+        gap: .2em;
+        color: $--main_panel_color;
+        font-size: 2em;
+        padding-left: 15px;
+
+        a {
+            display: flex;
+            color: $--main_panel_color;
+            align-self: center;
+            transform: rotate(0turn);
+            transition: transform .3s;
+
+            &:hover {
+                transform: rotate(.5turn);
+                transition: transform .3s;
+            }
+        }
+    }
+
+    .link-list {
+        display: flex;
+        flex-direction: row;
+        gap: 1em;
+        padding: 0;
+        padding-right: 15px;
+
+        .logo {
+            transform: scale(1, 1);
+            transition: transform .3s;
+
+            &:hover {
+                transform: scale(1.1, 1.1);
+                transition: transform .3s;
+            }
+        }
+
+        li {
+            list-style-type: none;
+            align-self: center;
+
+            a {
+                text-decoration: none;
+                color: $--main_panel_color;
+                font-weight: 600;
+                font-family: $--second-font;
+                transition: color .3s;
+
+                &:hover {
+                    color: darken($color: $--main_panel_color, $amount: 15);
+                    transition: color .3s;
+                }
+            }
+        }
+    }
+}
