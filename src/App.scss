@@ -8,3 +8,24 @@ body {
   padding: 0;
   margin: 0;
 }
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.main-container {
+  width: 75%;
+  padding: 0 20px;
+  background-color: $--main_container_color;
+}
+
+
+@media ( max-width: 580px ) {
+
+  .main-container {
+    width: 100%;
+  }
+}
