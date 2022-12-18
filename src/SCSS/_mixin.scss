@@ -1,0 +1,22 @@
+@mixin layout-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 1px solid $--main_panel_color;
+}
+
+@mixin text-header {
+    font-size: 7em;
+    color: $--main_panel_color;
+    text-shadow: 1px 1px 3px #000;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    margin-top: 10px;
+}
+
+@mixin underline {
+    width: 150px;
+    height: 10px;
+    margin-top: -100px;
+    background-color: $--main_panel_color;
+}
