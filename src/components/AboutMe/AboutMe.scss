@@ -1,1 +1,62 @@
 @import "../../SCSS/variables";
+@import "../../SCSS/mixin";
+
+.about-me {
+
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+
+    .text-header {
+
+        @include layout-header;
+
+        h2 {
+            @include text-header;
+        }
+
+        .underline {
+            @include underline
+        }
+    }
+
+    .aboutme-me-text {
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        img {
+            width: 400px;
+            height: 400px;
+            border-radius: 50%;
+            box-shadow: 20px 1px 1px $--main_panel_color;
+        }
+
+        .about-me-paragraph {
+            font-size: 1.5em;
+            line-height: 1.5em;
+            color: $--second_panel_color;
+        }
+    }
+}
+
+@media ( max-width: 580px ) {
+
+    .about-me {
+
+        .aboutme-me-text {
+
+            img {
+                width: 250px;
+                height: 250px;
+            }
+    
+            .about-me-paragraph {
+                font-size: 1.3em;
+                padding: 0 20px;
+            }
+        }
+    }
+
+}
