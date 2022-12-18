@@ -1,0 +1,39 @@
+@import "../../SCSS/variables";
+@import "../../SCSS/mixin";
+
+
+.cennik {
+
+    .text-header {
+
+        @include layout-header;
+
+        h2 {
+            @include text-header;
+        }
+
+        .underline {
+            @include underline
+        }
+    }
+
+
+    .my-tabs {
+        width: 100%;
+        border-collapse: collapse;
+
+        td {
+            border-bottom: 1px solid rgb(139, 131, 131);
+            padding: .5em 0;
+        }
+
+        ul {
+            padding: 0;
+
+            li {
+                list-style-type: none;
+            }
+        }
+    }
+
+}
