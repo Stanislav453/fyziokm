@@ -1,0 +1,94 @@
+@import "../../SCSS/variables";
+@import "../../SCSS/mixin";
+
+.kurzy {
+
+    .text-header {
+
+        @include layout-header;
+
+        h2 {
+            @include text-header;
+        }
+
+        .underline {
+            @include underline
+        }
+    }
+
+    .my-wraper {
+        display: flex;
+        width: calc(50% - 7.5px);
+        margin-right: 3.4%;
+
+        &:nth-of-type(odd) {
+            flex-direction: row-reverse;
+
+            .content {
+
+                h4 {
+                    text-align: right;
+                    margin-right: 20px;
+                }
+            }
+        }
+
+        &:nth-of-type(even){
+            margin-left: auto; 
+        }
+
+        .content-line {
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 21.28px;
+
+            &:nth-of-type(2n) {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .svg-icon {
+                font-size: 2em;
+                color: $--main_panel_color;
+                filter: drop-shadow(1px 1px .5px #000);
+            }
+
+            .line {
+                width: 1px;
+                height: 90%;
+                margin-top: 5px;
+                background-color: $--main_panel_color;
+            }
+
+        }
+
+        .content {
+
+            h4 {
+                font-size: 1.8em;
+                color: $--main_panel_color;
+                text-shadow: 1px 1px 1px rgb(0, 0, 0);
+                margin: 21.28px 0 15px 20px;
+            }
+
+            ul {
+                padding: 0;
+                margin: 0;
+
+                li {
+                    list-style-type: none;
+                    font-size: 1.2em;
+                    padding: .5em 0 .5em 0;
+
+                }
+            }
+        }
+    }
+  
+}
+
+
+
