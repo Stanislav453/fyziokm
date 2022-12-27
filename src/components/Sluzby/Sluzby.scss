@@ -1,0 +1,156 @@
+@import "../../SCSS/mixin";
+@import "../../SCSS/variables";
+
+.sluzby {
+    
+    .text-header {
+
+        @include layout-header;
+
+        h2 {
+            @include text-header;
+        }
+
+        .underline {
+            @include underline;
+        }
+    }
+
+    .sluzby-content {
+        display: flex;
+        flex-direction: row;
+
+        .content-box {
+            flex: 1;
+
+            .content-box-hight {
+                font-size: 2em;
+                margin-bottom: 5px;
+            }
+
+            &:nth-of-type(odd) {
+                padding-right: .5em;
+            }
+
+            .article-box {
+
+              .article-header {
+                display: flex;
+                flex-flow: row;
+                align-items: center;
+                justify-content: space-between;
+                font-weight: 900;
+                padding: .5em 0;
+                background-color: $--main_panel_color;
+                padding: .5em .5em; 
+                cursor: pointer; 
+                transition: background-color .6s;
+                box-shadow: 1px 1px 1px #000;
+
+                &:hover {
+                   background-color: darken($--main_panel_color, 10%); 
+                   transition: background-color .3s;
+                }
+
+                h4 {
+                    flex: 1;
+                }
+
+                .arrow-icon {
+                    flex: none;
+                    font-size: 2em;
+                    transform: rotate(0turn);
+                    transition: transform .3s;
+                    padding-left: .2em;
+                }
+
+                .rotate {
+                    transform: rotate(.5turn);
+                    transition: transform .3s;
+                }
+              }
+
+                .content-box-desc {
+                    max-height: 0;
+                    margin-top:0;
+                    margin-bottom: .5em;
+                    padding: 0;  
+                    overflow: hidden;
+                    background-color: $--main_panel_color;
+                    font-style: italic;
+                    transition: max-height .5s , padding .3s linear;
+                    }
+
+                .show {
+                    padding: .5em .5em .5em .5em; 
+                    max-height: 250px;
+                    box-shadow: 1px 1px 1px #000;
+                    transition: max-height .5s, padding .3s linear;
+
+                    }
+              
+                .article-header-active {
+                    
+                    background-color: darken($--main_panel_color, 10%) !important; 
+                }
+            }
+        }
+    }
+}
+
+
+    @media ( max-width: 1000px ) {
+
+        .sluzby {
+    
+            .sluzby-content {
+
+                flex-flow: column wrap;
+    
+                .content-box {
+                    padding-left: .5em;
+    
+                    .article-box {
+    
+                        .article-header {
+    
+                        }
+                    }
+                }
+            }
+    
+        }
+    
+    }
+
+
+@media ( max-width: 520px ) {
+    .sluzby {
+
+        .sluzby-content {
+
+            .content-box {
+                padding-left: 0;
+
+               &:nth-of-type(2n+1) {
+                padding-right: 0;
+               } 
+
+                .content-box-hight {
+                    font-size: 1.5em;
+                }
+
+                .article-header {
+
+                    h4 {
+                        font-size: .9em;
+                    }
+
+                    p {
+                        font-size: .8em;
+                    }
+                }
+            }
+        }
+    }
+}
