@@ -6,7 +6,7 @@ const Cennik = () => {
     return (
         <div className="cennik">
             <header className="text-header">
-                <h2 id="cennik" >Cennik</h2>
+                <h2 id="cennik" >Cenník</h2>
                 <div className="underline"></div>
             </header>
             <table className="my-tabs">
