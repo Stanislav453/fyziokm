@@ -1,0 +1,18 @@
+@import "../../SCSS/mixin";
+@import "../../SCSS/variables";
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 90px;
+    margin-top: 2%;
+    background-color: $--second_panel_color;
+
+    img {
+        width: 70px;
+        height: 70px;
+        filter: drop-shadow( 1px 1px 1px #000);
+    }
+}
