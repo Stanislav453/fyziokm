@@ -1,0 +1,104 @@
+@import "../../SCSS/mixin";
+@import "../../SCSS/variables";
+
+.kontakt {
+
+    .text-header {
+
+        @include layout-header;
+
+        h2 {
+            @include text-header;
+        }
+
+        .underline {
+            @include underline
+        }
+
+        margin-bottom: 1.5em;
+    }
+
+    .kontakt-container {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        
+        .kontakt-one {
+            flex: 1;
+            
+            .kontakt-map {
+                display: flex;
+                justify-content: center;
+                margin-top: 2%;
+            }
+
+            ul {
+                margin: 0;
+                padding: 0;
+
+                li {
+                    display: flex;
+                    gap: 10px;
+                    align-items: center;
+                    list-style-type: none;
+                    font-weight: 600;
+                    font-size: 1.1em;
+                    padding: .5em 0;
+
+                    .kontakt-icons {
+                        flex: none;
+                        font-size: 1.6em;
+                        color: $--main_panel_color;
+                        filter: drop-shadow(1px 1px .5px rgb(104, 103, 103));
+                    }
+
+                    a {
+                        color: $--second_panel_color;
+                        text-decoration: none;
+
+                        &:hover {
+                            border-bottom: 1px solid $--second_panel_color;
+                        }
+                    }
+                }
+            }
+        }
+
+        .kontakt-two {
+            flex: 1;
+            flex-shrink: 0;
+            height: 500px;
+            background-image: url(../../img/ordinacia.jpg);
+            background-size: cover;
+            background-position: center center;
+        }
+    }
+}
+
+@media ( max-width: 1000px ) {
+
+    .kontakt {
+
+        .kontakt-container {
+            flex-direction: column;
+            height: 1000px;
+
+            .kontakt-one {
+
+                ul {
+
+                    li {
+
+                        font-size: .8em;
+
+                        .kontakt-icons {
+                            font-size: 2.6em;
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+
+}
