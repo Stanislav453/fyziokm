@@ -1,9 +1,21 @@
-
+import React, { useState } from "react";
 import "./Kurzy.scss";
 import { FaLeanpub, FaReadme } from "react-icons/fa";
 import data from "./data";
 
 const Kurzy = () => {
+
+    const [ toggle, setToggle ] = useState(0);
+
+    const myToggle = (i) =>  {
+
+        if ( toggle === i ) {
+           return setToggle(null)
+        }
+
+        setToggle(i)
+
+    }
 
     return(
         <div className="kurzy">
@@ -22,13 +34,13 @@ const Kurzy = () => {
                                 <div className="line"></div>
                             </div>
                             <div className="content">
-                                <h4>{year}</h4>
-                                <ul>
+                                <h4 key={key} onClick={ () => { myToggle(key) } } >{year}</h4>
+                                <ul className={ toggle == key ? "show" : "" }>
                                     { 
                                         list.map( (item, key) => {
                                             const { title, desc } = item
                                             return (
-                                                <li><strong>{title}</strong> {desc}</li>
+                                                <li key={key} > <strong>{title}</strong> {desc}</li>
                                             )
                                         } )
                                     }
