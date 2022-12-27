@@ -8,6 +8,8 @@ body {
   padding: 0;
   margin: 0;
   color: $--second_panel_color;
+  overflow: auto;
+
 }
 
 main {
@@ -24,9 +26,17 @@ main {
 }
 
 
-@media ( max-width: 580px ) {
+@media ( max-width: 1230px ) {
 
   .main-container {
     width: 100%;
+  }
+}
+
+
+@media ( max-width: 580px ) {
+
+  main {
+    padding: 0 10px;
   }
 }
