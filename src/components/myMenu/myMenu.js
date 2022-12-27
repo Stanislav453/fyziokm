@@ -3,6 +3,7 @@ import { data } from "./nav_data";
 import { FaInstagram, FaFacebook, FaBars, FaBan  } from "react-icons/fa"
 import logo from "../../logo.svg"
 import "./MyMenu.scss";
+import { Link } from "react-scroll";
 
 const MyMenu = () => {
 
@@ -15,7 +16,7 @@ const MyMenu = () => {
 
     return (
     <div className="container-nav">
-        <nav className="navigation">
+        <nav id="home" className="navigation">
             <div className="icons">
                 <a href="https://www.instagram.com/michaleckristian/"><FaInstagram /></a>
                 <a href="https://www.facebook.com/kristian.michalec"><FaFacebook /></a>
@@ -28,7 +29,7 @@ const MyMenu = () => {
                 data.map( (item,key) => {
                     return(
                        <li  key={key}>
-                            <a onClick={ () => { setClicked(true) } }  href={item.link}>{item.name}</a>
+                            <Link onClick={ () => { setClicked(true) } } style={{ cursor:"pointer" }}  to={item.id} spy={true} smooth={true} duration={500} > {item.name} </Link>
                        </li>
                     )
                 })
