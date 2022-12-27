@@ -1,0 +1,24 @@
+@import "../../SCSS/mixin";
+@import "../../SCSS/variables";
+
+.scroll-icon {
+    position: fixed ;
+    bottom: -10px ;
+    right: 25px ;
+    color: $--main_panel_color;
+    font-size: 5em;
+    filter: drop-shadow( 1px 1px 3px #000);
+    cursor: pointer;
+}
+
+.hide {
+    display: none;
+}
+
+@media (max-width: 520px) {
+
+    .scroll-icon {
+        font-size: 4em;
+        right: 15px;
+    }
+}
