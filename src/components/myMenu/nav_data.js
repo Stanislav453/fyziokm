@@ -29,8 +29,4 @@ export const data = [
         name: "Kontakt",
         link: "#kontakt"
     },
-    {
-        name: "Fotogaleria",
-        link: "http://fyziokm.sk/fotogaleria.html"
-    }
 ]
